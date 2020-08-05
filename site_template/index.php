@@ -2,14 +2,27 @@
 
 <html lang="en">
     
-
+<?php
+   
+    session_start(); // to allow variable transfer between pages...
+    include("config.php");
+    
+    // Connect to database...
+    $dbconnect=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
+    
+    if(mysqli_connect_errno()) {
+    echo"Connection failed:".mysqli_connect_error();
+    exit;
+    }
+    
+    ?>
 <head>
     <meta charset="utf-8">
     <meta name="description" content="games, apps, ">
-    <meta name="GTT" content="Game / App Database">
+    <meta name="author" content="Kristelle">
     <meta name="keywords" content="games, apps, ratings">
     
-    <title>Game Database</title>
+    <title>Game Database</title> 
 
     <!-- for multiple fonts change | to %7c * no spaces*  -->
     <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet">  
@@ -58,7 +71,7 @@
         </div> <!-- / side bar -->
         
         <div class="box footer">
-            CC GTT 20XX
+            CC Kristelle Sampang 2020
         </div> <!-- / footer -->
                 
         
