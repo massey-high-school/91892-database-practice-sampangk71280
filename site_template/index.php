@@ -22,7 +22,7 @@
     <meta name="author" content="Kristelle">
     <meta name="keywords" content="games, apps, ratings">
     
-    <title>Game Database</title>
+    <title>Game Database</title> 
 
     <!-- for multiple fonts change | to %7c * no spaces*  -->
     <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet">  
