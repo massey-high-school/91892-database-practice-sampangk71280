@@ -35,8 +35,14 @@ FROM `L2_DB_Prac_game_details`";
             
             <!-- Results go here -->
             <div class="results">
-                You have results!
-            </div>
+                <span class="sub_heading">
+                    <a href="<?php echo $find_rs['URL']; ?>">
+                    <?php echo $find_rs['Name']; ?>
+                    </a>
+                </span>
+            </div> <!-- / results -->
+            
+            <br />
             
             <?php
                     
