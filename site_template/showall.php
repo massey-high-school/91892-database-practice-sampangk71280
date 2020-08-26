@@ -1,7 +1,13 @@
      <?php include("topbit.php");
 
         $find_sql = "SELECT *
-FROM `L2_DB_Prac_game_details`";
+        FROM `L2_DB_Prac_game_details`
+        JOIN L2_DB_Prac_genre ON (L2_DB_Prac_game_details.GenreID = L2_DB_Prac_genre.GenreID)
+        JOIN L2_DB_Prac_developer ON (L2_DB_Prac_game_details.DeveloperID = L2_DB_Prac_developer.DeveloperID)
+
+
+
+        ";
         $find_query = mysqli_query($dbconnect, $find_sql);
         $find_rs = mysqli_fetch_assoc($find_query);
         $count = mysqli_num_rows($find_query);
@@ -40,10 +46,18 @@ FROM `L2_DB_Prac_game_details`";
                     <?php echo $find_rs['Name']; ?>
                     </a>
                 </span>
-
-            <?php echo $find_rs['GenreID'] ?>
-            <?php echo $find_rs['Genre'] ?>
-        
+            <p>
+                
+                <b>Genre</b>:
+                <?php echo $find_rs['Genre'] ?>
+                
+                <br />
+                
+                <b>Developer</b>:
+                <?php echo $find_rs['DevName'] ?>
+                
+            
+            </p>
             </div> <!-- / results -->
             
             <br />
