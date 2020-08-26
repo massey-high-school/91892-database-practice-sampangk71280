@@ -45,7 +45,7 @@
                     <a href="<?php echo $find_rs['URL']; ?>">
                     <?php echo $find_rs['Name']; ?>
                     </a>
-                </span>
+                </span> - <?php echo $find_rs['Subtitle'] ?>
             <p>
                 
                 <b>Genre</b>:
@@ -56,8 +56,27 @@
                 <b>Developer</b>:
                 <?php echo $find_rs['DevName'] ?>
                 
+                <br />
+                
+                <b>Ratings</b>:
+                <?php echo $find_rs['User Rating'] ?>
+                (based on <?php echo $find_rs['Rating Count'] ?> votes)
+                
+                <br />
+                
+                <b>Price</b>: $
+                <?php echo $find_rs['Price'] ?>
+                
+                <br / >
+
+                <b>In App Purchases</b>:
+                <?php echo $find_rs['In App'] ?>
             
             </p>
+            <hr />
+            <?php echo $find_rs['Description'] ?>
+                
+                
             </div> <!-- / results -->
             
             <br />
