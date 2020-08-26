@@ -40,10 +40,14 @@ FROM `L2_DB_Prac_game_details`";
                     <?php echo $find_rs['Name']; ?>
                     </a>
                 </span>
+
+            <?php echo $find_rs['GenreID'] ?>
+            <?php echo $find_rs['Genre'] ?>
+        
             </div> <!-- / results -->
             
             <br />
-            
+        
             <?php
                     
                     
