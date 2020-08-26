@@ -54,9 +54,21 @@
                     </div> <!-- / Title -->
                 
                     <?php
-                        if($find_rs['Substitle'] != "") {}
+                        if($find_rs['Subtitle'] != "")
+                        
                         {
                         
+                        ?>
+                    
+                    <div>
+                        &nbsp;&nbsp| &nbsp;&nbsp;
+                        <?php echo $find_rs['Subtitle'] ?> 
+                        
+                    </div> <!-- / subtitle -->
+                    
+                    
+                    <?php
+                            
                         }
                     
                     ?>
@@ -65,36 +77,27 @@
                 </div>
                 <!-- / Heading and subtitle -->
                 
-                <p>
+                <!-- Price -->
                 
-                <b>Genre</b>:
-                <?php echo $find_rs['Genre'] ?>
+                <?php 
+                    
+                    if($find_rs['Price'] == 0 ){
+                        ?>
+                    <p>Free!</p>
                 
-                <br />
+                    <?php
+                    } // end price if
+                    
+                    else {
+                        
+                        ?>
+                    <b>Price</b>: $<?php echo $find_rs['Price'] ?>
                 
-                <b>Developer</b>:
-                <?php echo $find_rs['DevName'] ?>
-                
-                <br />
-                
-                <b>Ratings</b>:
-                <?php echo $find_rs['User Rating'] ?>
-                (based on <?php echo $find_rs['Rating Count'] ?> votes)
-                
-                <br />
-                
-                <b>Price</b>: $
-                <?php echo $find_rs['Price'] ?>
-                
-                <br / >
-
-                <b>In App Purchases</b>:
-                <?php echo $find_rs['In App'] ?>
-            
-            </p>
-            <hr />
-            <?php echo $find_rs['Description'] ?>
-                
+                    <?php
+                        
+                    } // end price else (displays cist)
+                    
+                ?>
                 
             </div> <!-- / results -->
             
