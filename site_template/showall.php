@@ -84,6 +84,7 @@
                         <!-- Partial Stars Original Source:
                         https://codepen.io/Bluetidepro/pen/GkpEa -->
                         <div class="star-rating-sprite">
+                            <span style="width:52%" class="images/star-ratings-sprite-rating"></span>
                     
                         </div> <!-- / star rating div -->
                     
