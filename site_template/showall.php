@@ -83,12 +83,12 @@
                 
                         <!-- Partial Stars Original Source:
                         https://codepen.io/Bluetidepro/pen/GkpEa -->
-                        <div class="star-rating-sprite">
-                            <span style="width:52%" class="images/star-ratings-sprite-rating"></span>
+                        <div class="star-ratings-sprite">
+                            <span style="width:<?php echo $find_rs['User Rating'] / 5 * 100; ?>%" class="star-ratings-sprite-rating"></span> 
                     
                         </div> <!-- / star rating div -->
                     
-                        <div 0class="actual-rating">
+                        <div class="actual-rating">
                             (<?php echo $find_rs['User Rating'] ?> rating based on <?php echo number_format ($find_rs['Rating Count']) ?> ratings)
                         </div> <!-- / text rating div -->
                     
@@ -134,6 +134,20 @@
                     } // end price else (displays cist)
                     
                 ?>
+                
+                <!--- / Price --->
+                
+                <p>
+                    <!-- Developer, Genre and Age... -->
+                    <b>Developer:</b><?php echo $find_rs['DevName'] ?><br/>
+                    <b>Genre:</b><?php echo $find_rs['Genre'] ?><br/>
+                    Suitable for ages <b><?php echo $find_rs['Age']?> </b> and up
+                </p>
+                
+                <p>
+                    <i><?php echo $find_rs['Description'] ?> </i>
+                    
+                </p>
                 
             </div> <!-- / results -->
             
