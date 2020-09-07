@@ -1,10 +1,12 @@
      <?php include("topbit.php");
 
+        $name_dev = $_POST['dev_name'];
+
         $find_sql = "SELECT *
         FROM `L2_DB_Prac_game_details`
         JOIN L2_DB_Prac_genre ON (L2_DB_Prac_game_details.GenreID = L2_DB_Prac_genre.GenreID)
         JOIN L2_DB_Prac_developer ON (L2_DB_Prac_game_details.DeveloperID = L2_DB_Prac_developer.DeveloperID)
-        WHERE `Name` LIKE '%chess%'
+        WHERE `Name` LIKE '%$name_dev%' OR `DevName` LIKE '%$name_dev%'
 
 
         ";
