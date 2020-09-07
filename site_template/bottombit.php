@@ -9,8 +9,7 @@
                <input class="search" type="text" name="dev_name"
                 size="32" value="" required placeholder="App Name / Developer Name..."/> 
                
-               <input class="submit" type="submit"
-                name="find_dev_name" value="&#xf002;"/>
+               <input class="submit" type="submit" name="find_dev_name" value="&#xf002;"/>
                
                
                
