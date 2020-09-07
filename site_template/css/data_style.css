@@ -194,7 +194,7 @@ a.side:hover {color:#8a1737; }
     border-radius: 0 5px 5px 0;
 }
 
-input[type="submit"]: hover{
+input[type="submit"]:hover{
     background-color: #000;
 }
 
@@ -208,4 +208,10 @@ input{
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.free{
+    width: 245px;
+    border-radius: 5px;
+    font-size: 105%;
 }
