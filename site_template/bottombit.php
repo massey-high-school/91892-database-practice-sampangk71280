@@ -39,6 +39,9 @@
                 
                 <!-- Genre Dropdown -->
                 <select class="search adv" name="genre">
+                    
+                    <option value="" disabled selected>Genre...</option>
+                    
                 <!--- get options from database -->
                     <?php
                         $genre_sql="SELECT *
