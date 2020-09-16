@@ -40,7 +40,7 @@
                 <!-- Genre Dropdown -->
                 <select class="search adv" name="genre">
                     
-                    <option value="" disabled selected>Genre...</option>
+                    <option value="" selected>Genre...</option>
                     
                 <!--- get options from database -->
                     <?php
@@ -68,6 +68,7 @@
                     
                 <!-- Cost -->
                 <div class="flex-container">
+                    
                     <div class="adv-text">
                         Cost&nbsp;(less&nbsp;than):
                     </div> <!-- cost label-->
@@ -76,7 +77,7 @@
                         <input class="adv" type="text" name="cost" size="40" value="" placeholder="$..."/>
                     </div> <!--/ cost input box-->
                     
-                </div> <!--/ cost flexbox-->>
+                </div> <!--/ cost flexbox-->
     
                 <!-- No In App Checkbox -->
                 <input class="adv-text" type="checkbox" name="in_app" value="0"> No In App Purchase
@@ -90,14 +91,14 @@
                     
                     <div>
                         <select class="search adv" name="rate_more_less">
-                            <option value="" disabled> Choose...</option>
+                            <option value="" > Choose...</option>
                             <option value="at least"> At Least</option>
                             <option value="at most"> At Most</option>
                         </select>
                     </div> <!-- / rating drop down -->
                     
                     <div>
-                        <input class="adv" type="text" name="rating" size="3" value="" placeholder=""/>
+                        <input class="adv" type="text" name="rating" size="2" value="" placeholder=""/>
                     </div> <!-- rating amount -->
                     
                 </div>
@@ -106,19 +107,19 @@
                 <div class="flex-container">
                     
                     <div class="adv-txt">
-                        Age:
+                          Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div> <!-- / rating label -->
                     
                     <div>
                         <select class="search adv" name="rate_more_less">
-                            <option value="" disabled> Choose...</option>
+                            <option value="" > Choose...</option>
                             <option value="at least"> At Least</option>
                             <option value="at most"> At Most</option>
                         </select>
                     </div> <!-- / rating drop down -->
                     
                     <div>
-                        <input class="adv" type="text" name="age" size="3" value="" placeholder=""/>
+                        <input class="adv" type="text" name="rating" size="2" value="" placeholder=""/>
                     </div> <!-- rating amount -->
                     
                 </div>

@@ -41,7 +41,7 @@
                         ?>
                     
                     <div>
-                        &nbsp;&nbsp| &nbsp;&nbsp;
+                        &nbsp;&nbsp;| &nbsp;&nbsp;
                         <?php echo $find_rs['Subtitle'] ?> 
                         
                     </div> <!-- / subtitle -->
