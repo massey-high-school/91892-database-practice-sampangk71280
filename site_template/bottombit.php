@@ -30,8 +30,7 @@
             
                 <form class="searchform" method="post"
                     action="advanced.php" enctype="multipart/form-data">
-                
-                        <p>Form goes here...</p>
+        
                     
                 <input class="adv" type="text" name="app_name" size="40" value="" placeholder="App Name / Title..."/>
                     
