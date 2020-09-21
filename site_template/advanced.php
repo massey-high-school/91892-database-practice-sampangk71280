@@ -31,7 +31,7 @@
 ?>
 
         <div class="box main">
-            <h2>All Results</h2>
+            <h2>Advanced Search Results</h2>
             
             <?php 
             include("results.php");
