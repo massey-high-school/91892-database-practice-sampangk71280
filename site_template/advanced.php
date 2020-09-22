@@ -5,6 +5,7 @@
         $genre = mysqli_real_escape_string($dbconnect, $_POST['genre']);
         $cost = mysqli_real_escape_string($dbconnect, $_POST['cost']);
         
+        // In App Purchases...
         if (isset($_POST['in_app'])) {
             $in_app = 0;
         }
@@ -13,6 +14,24 @@
             $in_app = 1;
         }
         
+        // Rating
+        $rating_more_less = mysqli_real_escape_string($dbconnect, $_POST['rate_more_less']);
+        $rating = mysqli_real_escape_string($dbconnect, $_POST['rating']);
+
+        if ($rating_more_less == "at least") {
+            $rate_op = ">="; 
+        }
+
+        elseif ($rating_more_less == "at most") {
+            $rate_op = "<=";
+        }
+                
+        else {
+            $rate_op = ">=";
+            $rating = 0;
+        } // end rating if / elseif /else  
+
+
         $find_sql = "SELECT *
         FROM `L2_DB_Prac_game_details`
         JOIN L2_DB_Prac_genre ON (L2_DB_Prac_game_details.GenreID = L2_DB_Prac_genre.GenreID)
@@ -22,7 +41,9 @@
         AND `Genre` LIKE '%$genre%'
         AND `Price` <= '$cost'
         AND (`In App` = $in_app OR `In App` = 0) 
-
+        AND `User Rating` $rate_op $rating
+        
+        
         ";
         $find_query = mysqli_query($dbconnect, $find_sql);
         $find_rs = mysqli_fetch_assoc($find_query);
