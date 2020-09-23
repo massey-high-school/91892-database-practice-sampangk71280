@@ -31,6 +31,22 @@
             $rating = 0;
         } // end rating if / elseif /else  
 
+        // Age ....
+        $age_more_less = mysqli_real_escape_string($dbconnect, $_POST['age_more_less']);
+        $age = mysqli_real_escape_string($dbconnect, $_POST['age']);
+
+        if($age_more_less == "at least") {
+            $age_op = ">=";
+        }
+
+        elseif($age_more_less == "at most") {
+            $age_op = "<=";
+        }
+
+        else {
+            $age_op = ">=";
+            $age = 0;
+        } // end age if / elseif /else  
 
         $find_sql = "SELECT *
         FROM `L2_DB_Prac_game_details`
@@ -42,6 +58,7 @@
         AND `Price` <= '$cost'
         AND (`In App` = $in_app OR `In App` = 0) 
         AND `User Rating` $rate_op $rating
+        AND `Age` $age_op $age
         
         
         ";

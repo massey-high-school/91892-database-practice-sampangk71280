@@ -109,19 +109,19 @@
                     
                     <div class="adv-txt">
                           Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    </div> <!-- / rating label -->
+                    </div> <!-- / age label -->
                     
                     <div>
-                        <select class="search adv" name="rate_more_less">
+                        <select class="search adv" name="age_more_less">
                             <option value="" > Choose...</option>
                             <option value="at least"> At Least</option>
                             <option value="at most"> At Most</option>
                         </select>
-                    </div> <!-- / rating drop down -->
+                    </div> <!-- / age drop down -->
                     
                     <div>
-                        <input class="adv" type="text" name="rating" size="2" value="" placeholder=""/>
-                    </div> <!-- rating amount -->
+                        <input class="adv" type="text" name="age" size="2" value="" placeholder=""/>
+                    </div> <!-- age amount -->
                     
                 </div>
                 
