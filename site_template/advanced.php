@@ -5,6 +5,16 @@
         $genre = mysqli_real_escape_string($dbconnect, $_POST['genre']);
         $cost = mysqli_real_escape_string($dbconnect, $_POST['cost']);
         
+        // Cost code (to handle when cost is not specified...)
+        if ($cost==""){
+            $cost_op = ">=";
+            $cost = 0;
+        }
+        else {
+            $cost_op = "<=";
+        }
+
+
         // In App Purchases...
         if (isset($_POST['in_app'])) {
             $in_app = 0;
