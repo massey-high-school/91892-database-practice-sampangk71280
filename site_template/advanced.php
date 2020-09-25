@@ -68,7 +68,7 @@
         AND `Price` <= '$cost'
         AND (`In App` = $in_app OR `In App` = 0) 
         AND `User Rating` $rate_op $rating
-        AND `Age` $age_op $age
+        
         
         
         ";
