@@ -30,6 +30,8 @@
 
         if ($rating_more_less == "at least") {
             $rate_op = ">="; 
+            
+            
         }
 
         elseif ($rating_more_less == "at most") {
@@ -41,16 +43,24 @@
             $rating = 0;
         } // end rating if / elseif /else  
 
-        // Age ....
+         // Age ....
         $age_more_less = mysqli_real_escape_string($dbconnect, $_POST['age_more_less']);
         $age = mysqli_real_escape_string($dbconnect, $_POST['age']);
 
         if($age_more_less == "at least") {
             $age_op = ">=";
+            
+            if($age=="") {
+                $age = 0;
+            }
         }
 
         elseif($age_more_less == "at most") {
             $age_op = "<=";
+            
+            if($age=="") {
+                $age = 120;
+            }
         }
 
         else {
