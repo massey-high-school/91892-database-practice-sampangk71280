@@ -31,16 +31,25 @@
         if ($rating_more_less == "at least") {
             $rate_op = ">="; 
             
+            if($rating =="") {
+                $rating = 0;
+            }
+            
             
         }
 
         elseif ($rating_more_less == "at most") {
             $rate_op = "<=";
+            
+            if($rating=="") {
+                $rating = 100;
+            }
         }
                 
         else {
             $rate_op = ">=";
             $rating = 0;
+            
         } // end rating if / elseif /else  
 
          // Age ....
