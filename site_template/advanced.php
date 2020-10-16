@@ -72,7 +72,7 @@
             }
         }
 
-        else {
+        else { 
             $age_op = ">=";
             $age = 0;
         } // end age if / elseif /else  
