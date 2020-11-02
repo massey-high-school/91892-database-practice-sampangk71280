@@ -1,5 +1,12 @@
      <?php include("topbit.php");
 
+// Get Genre list from database
+$genre_sql="SELECT *
+FROM `L2_DB_Prac_genre`
+ORDER BY `L2_DB_Prac_genre`.`Genre` DESC"
+$genre_query=mysqli_query($dbconnect, $genre_sql);
+$genre_rs=mysqli_fetch_assoc($genre_query); 
+
 // Initialise from variables 
 
 $app_name = "";
@@ -35,23 +42,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input class="add-field" type="text" name="app_name" value="<?php echo $app_name; ?>" required placeholder="App Name (required) ..."/>
                 
             <!-- Subtitle (optional) -->
+            <input class="add-field" type="text" name="subtitle" size="40"
+            value="<?php echo $subtitle; ?>" placeholder="Subtitle (optional)..."/>
                 
             <!-- URL (required, must start http://) -->    
-            
+            <input class="add-field <?php echo $url_field; ?>" type="text"
+            name="url" size="40" value="<?php echo $url; ?>" placeholder="URL (required)"/>
+                
             <!-- Genre dropdown (required) -->
+            <select class="adv" name="genre">
+                <option value="" disabled selected> Genre (Choose something)... </option>
+                
+                <!-- get options from database -->
+                <?php
+                
+                do {
+                    ?>
+                <option value="<?php echo $genre_rs['GenreID']; ?>"><?php echo $genre_rs['Genre']; ?></option>
+                
+                <?php
+                } // end genre do loop
+                while ($genre_rs=mysqli_fetch_assoc($genre_query))
+                ?>
+                
+            </select>    
                 
             <!-- Developer Name (required) --> 
+            <input class="add-field <?php echo $dev_field ?>" type="text"
+            name="dev_name" value="<?php echo $dev_name; ?>" size="40"
+            placeholder="Developer Name (required)..."/>
                 
             <!-- Age (set to 0 if left blank) -->
-                
+            <input class="add-field" type="text" name="age" value="<?php echo $age; ?>"
+            placeholder="Age (0 for all)"/>
+                 
             <!-- Rating (Number between 0-5, 1 dp) -->
             <div>
                 <input class="add-field" type="number" name="rating" value="<?php echo $rating ?>" required step = "0.1" min=0 max=5 placeholder="Rating (0-5)" />  
             </div>
                 
             <!-- # of rating (integer more than 0) -->
+            <input class="add-field" type="text" name="count" value="<?php echo $rate_count; ?>" placeholder="# of Ratings"/>
                 
             <!-- Cost (Decimal 2dp, must be more than 0)-->
+            <input class="add-field" type="text" name="price" value="<?php echo $cost; ?>" placeholder="Cost (number only)"/>
                 
             <!-- In App Purchase radio buttons  -->
                 
